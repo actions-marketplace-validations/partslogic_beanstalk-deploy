@@ -2,7 +2,7 @@ name: 'Beanstalk Deploy'
 description: 'Deploy a zip file to AWS Elastic Beanstalk'
 author: 'Einar Egilsson'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'beanstalk-deploy.js'
 inputs:
   aws_access_key:
@@ -13,7 +13,7 @@ inputs:
     required: true
   aws_session_token:
     description: 'AWS Session Token when using temporary security credentials such as when assuming a role in AWS through STS'
-    required: false  
+    required: false
   region:
     description: 'AWS Region'
     required: true
@@ -46,5 +46,5 @@ inputs:
     required: false
 
 branding:
-  icon: 'arrow-up'  
+  icon: 'arrow-up'
   color: 'green'
